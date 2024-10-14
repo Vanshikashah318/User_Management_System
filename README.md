@@ -1,4 +1,6 @@
 User Management System
+
+
 Description
 The User Management System is a RESTful API application that provides basic user authentication and management functionality. It allows users to register, log in, view, and update their profile securely using JWT-based authentication. This system is ideal for managing users in applications that require secure login and profile management.
 

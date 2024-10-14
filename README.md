@@ -1,12 +1,50 @@
-User Management System
+
+# User Management System
+
+## 📑 Description  
+A simple user management system built with Node.js and MongoDB. It allows users to **register**, **login**, and manage their profiles securely with JWT-based authentication.
+
+---
+
+## 🚀 Features Implemented  
+- **User Registration**: Creates a new user with a hashed password.  
+- **User Login**: Issues JWT token for authentication.  
+- **User Profile**: Displays user information (protected route).  
+- **Authentication Middleware**: Protects private endpoints.  
+- **Environment Configuration**: Uses `.env` for sensitive information.
+
+---
+
+## 🧪 Testing Instructions
+Test the following API endpoints using Postman or any other API testing tool.
+I tested This using CURL from my termilan itself.
+**Some tests that I used were the following**:
+- **USER Registration**: POST /api/users/register
+   ```bash
+    curl -X POST http://localhost:5000/api/users/register \-H "Content-Type: application/json" \-d '{"name": "John Doe", "email": "john@example.com", "password": "password123"}'
+
+- **User Login**:  POST /api/users/login
+- **User Profile**: GET /api/users/profile
+
+---
+
+## 🛠️ Setup Instructions  
+Follow these steps to run the project locally:
+
+1. **Clone the Repository**:
+   ```bash
+   git clone git@github.com:Vanshikashah318/User_Management_System.git
+   cd User_Management_System
+2. **Install Dependencies loaclly**:
+    ```bash
+   npm install
+
+3.**Set Up Environment Variables**:
+Create a .env file in the root directory and add the following:
+ ```bash
+MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/myDatabase?retryWrites=true&w=majority
+JWT_SECRET=your_jwt_secret
+---
 
 
-Description
-The User Management System is a RESTful API application that provides basic user authentication and management functionality. It allows users to register, log in, view, and update their profile securely using JWT-based authentication. This system is ideal for managing users in applications that require secure login and profile management.
 
-Features Implemented
-User Registration: Users can register with a name, email, and password.
-User Login: Users can log in with their credentials to receive a JWT token.
-JWT Authentication: Secure endpoints using JSON Web Token (JWT) for protected access.
-Get User Profile: Users can retrieve their profile information using the JWT token.
-Update User Profile: Users can update their name and email while authenticated.
